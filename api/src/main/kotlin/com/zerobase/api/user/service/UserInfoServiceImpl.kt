@@ -4,7 +4,6 @@ import com.zerobase.api.exception.CustomErrorCode
 import com.zerobase.api.exception.CustomException
 import com.zerobase.api.user.dto.InputUserInfoDto
 import com.zerobase.api.user.dto.ReadUserInfoDto
-import com.zerobase.api.user.encrypt.EncryptComponent
 import com.zerobase.api.user.util.UserKeyGenerator
 import com.zerobase.domain.entity.UserInfo
 import com.zerobase.domain.repository.UserInfoRepository
