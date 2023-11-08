@@ -1,4 +1,10 @@
 package com.zerobase.domain.repository
 
-interface UserInfoRepository {
+import com.zerobase.domain.entity.UserInfo
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
+
+@Repository
+interface UserInfoRepository: JpaRepository<UserInfo, Long> {
+    fun findByUserKey(userKey: String): UserInfo
 }

@@ -1,4 +1,4 @@
-package com.zerobase.api.user.service.impl
+package com.zerobase.api.user.service
 
 import com.zerobase.api.user.dto.InputUserInfoDto
 import com.zerobase.api.user.dto.ReadUserInfoDto
@@ -6,5 +6,5 @@ import com.zerobase.api.user.dto.ReadUserInfoDto
 interface UserInfoService {
     fun userInfoMain(createRequest: InputUserInfoDto.CreateRequest): InputUserInfoDto.CreateResponse
     fun saveUserInfo(createRequest: InputUserInfoDto.CreateRequest, userKey: String)
-    fun getUserInfo(userKey: String): ReadUserInfoDto.ReadResponse
+    fun getUserInfoDto(userKey: String): ReadUserInfoDto.ReadResponse
 }

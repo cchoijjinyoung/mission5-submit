@@ -7,5 +7,8 @@ enum class CustomErrorCode(
     val errorCode: String,
     val errorMessage: String
 ) {
-    RESULT_NOT_FOUND(HttpStatus.BAD_REQUEST, "E001", errorMessage = "result not found")
+
+    USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "E101", errorMessage = "존재하지 않는 유저입니다."),
+
+    ALREADY_EXIST_PRODUCT_IN_ORGANIZATION(HttpStatus.BAD_REQUEST, "E202", errorMessage = "이미 같은 기관에 동일한 상품이 존재합니다.")
 }

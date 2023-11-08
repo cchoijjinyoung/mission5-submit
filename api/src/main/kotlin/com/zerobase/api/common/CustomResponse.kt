@@ -1,6 +1,8 @@
 package com.zerobase.api.common
 
-class FintechResponse (
+import io.swagger.annotations.ApiModelProperty
+
+class CustomResponse (
     private val data: Any?,
     private val customResponseCode: CustomResponseCode
 ) {
@@ -14,7 +16,11 @@ class FintechResponse (
 
     data class ResponseDto(
         val data: Any?,
+
+        @ApiModelProperty(example = "00")
         val responseCode: String,
+
+        @ApiModelProperty(example = "success")
         val responseMessage: String
     )
 }

@@ -5,6 +5,7 @@ enum class OrganizationCode(
     NONE("00000"),
     ORGANIZATION_ONE("00001"),
     ORGANIZATION_TWO("00002");
+
     companion object {
         fun fromCodeValue(codeValue: String): OrganizationCode {
             for (enumValue in OrganizationCode.values()) {

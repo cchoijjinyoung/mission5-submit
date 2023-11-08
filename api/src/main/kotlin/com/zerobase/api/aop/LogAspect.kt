@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch
 class LogAspect {
     val logger = KotlinLogging.logger {  }
 
-    @Pointcut(value = "within(com.zerobase.api..*)")
+    @Pointcut("within(com.zerobase.api..*)")
     fun isApi() {}
 
     @Around(value = "isApi()")
@@ -24,8 +24,7 @@ class LogAspect {
         val result = joinPoint.proceed()
         stopWatch.stop()
 
-        logger.info { "${joinPoint.signature.name} ${joinPoint.args[0]} ${stopWatch.lastTaskTimeMillis}" }
-
+        logger.info { "${joinPoint.signature.name} ${joinPoint.args[0]?.toString() ?: "null"} ${stopWatch.lastTaskTimeMillis}"}
         return result
     }
 }

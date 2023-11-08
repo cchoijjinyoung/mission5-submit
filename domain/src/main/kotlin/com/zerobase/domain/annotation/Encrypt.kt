@@ -1,4 +1,5 @@
 package com.zerobase.domain.annotation
 
-class Encrypt {
-}
+@Target(AnnotationTarget.FIELD)
+@Retention(AnnotationRetention.RUNTIME)
+annotation class Encrypt

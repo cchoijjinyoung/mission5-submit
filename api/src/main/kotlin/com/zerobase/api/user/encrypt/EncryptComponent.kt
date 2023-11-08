@@ -1,8 +1,7 @@
-package com.zerobase.api.loan.encrypt
+package com.zerobase.api.user.encrypt
 
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
-import java.nio.charset.Charset
-import java.nio.charset.CharsetEncoder
 import java.util.*
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec

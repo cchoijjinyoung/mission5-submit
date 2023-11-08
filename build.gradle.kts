@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     kotlin("jvm") version "1.6.0"
@@ -47,4 +48,18 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
     }
+}
+
+project(":api") {
+    dependencies {
+        implementation(project(":domain"))
+    }
+}
+
+project(":domain") {
+    val jar: Jar by tasks
+    val bootJar: BootJar by tasks
+
+    jar.enabled = true
+    bootJar.enabled = false
 }
